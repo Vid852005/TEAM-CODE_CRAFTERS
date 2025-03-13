@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Healthcare Assistant</h1>
+        <label for="image-path">Enter Image Path:</label>
+        <input type="text" id="image-path" placeholder="Image Path">
+        <button onclick="scanReceipt()">Scan Receipt</button>
+        <br>
+        <label for="medicine-name">Enter Medicine Name:</label>
+        <input type="text" id="medicine-name" placeholder="Medicine Name">
+        <button onclick="speak()">Speak Medicine Info</button>
+        <button onclick="getMedicineInfo()">Get Medicine Info</button>
+        <br>
+        <label for="address">Enter Address:</label>
+        <input type="text" id="address" placeholder="Address">
+        <button onclick="findPharmaStores()">Find Pharma Stores</button>
+        <button onclick="recommendPhysician()">Recommend Physician</button>
+        <br>
+        <button onclick="checkOlderPatients()">Check Older Patients</button>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
